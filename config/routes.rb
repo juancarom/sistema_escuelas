@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'main/index'
+  get 'signin/signin'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :people
   devise_for :users
