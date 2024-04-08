@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person: one
+  type: 
+  time: 2024-04-08 14:55:00
+
+two:
+  person: two
+  type: 
+  time: 2024-04-08 14:55:00

@@ -1,0 +1,25 @@
+es:
+  devise:
+    registrations:
+      signed_up: "¡Te has registrado exitosamente! Por favor, inicia sesión para continuar."
+      signed_up_but_unconfirmed: "Te has registrado exitosamente. Te hemos enviado un correo electrónico con un enlace de confirmación. Por favor, revisa tu bandeja de entrada y confirma tu cuenta."
+      signed_up_but_inactive: "Te has registrado exitosamente. Sin embargo, tu cuenta está inactiva hasta que el administrador la active."
+      signed_up_but_locked: "Te has registrado exitosamente. Sin embargo, tu cuenta está bloqueada. Por favor, contacta al administrador para obtener más información."
+      updated: "Tu cuenta ha sido actualizada exitosamente."
+      destroyed: "Tu cuenta ha sido eliminada exitosamente. Lamentamos verte partir."
+    sessions:
+      signed_in: "Has iniciado sesión exitosamente."
+      signed_out: "Has cerrado sesión exitosamente."
+    passwords:
+      send_instructions: "Te hemos enviado un correo electrónico con instrucciones para restablecer tu contraseña. Por favor, revisa tu bandeja de entrada."
+      updated: "Tu contraseña ha sido actualizada exitosamente. Ahora puedes iniciar sesión con tu nueva contraseña."
+    confirmations:
+      send_instructions: "Te hemos enviado un correo electrónico con instrucciones para confirmar tu cuenta. Por favor, revisa tu bandeja de entrada."
+      confirmed: "¡Tu cuenta ha sido confirmada exitosamente! Ahora puedes iniciar sesión."
+      send_paranoid_instructions: "Si tu cuenta existe, te hemos enviado un correo electrónico con instrucciones para confirmarla. Por favor, revisa tu bandeja de entrada."
+    unlocks:
+      send_instructions: "Te hemos enviado un correo electrónico con instrucciones para desbloquear tu cuenta. Por favor, revisa tu bandeja de entrada."
+      unlocked: "Tu cuenta ha sido desbloqueada exitosamente. Ahora puedes iniciar sesión."
+    omniauth_callbacks:
+      success: "Has iniciado sesión exitosamente a través de %{kind}."
+      failure: "Ha ocurrido un error al iniciar sesión a través de %{kind}. Por favor, intenta nuevamente."
