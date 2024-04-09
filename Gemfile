@@ -82,3 +82,6 @@ gem 'papertrail'
 gem 'rubocop'
 
 gem 'rails-i18n'
+
+gem 'bootstrap', '~> 5.0.2'
+
