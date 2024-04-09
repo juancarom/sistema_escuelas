@@ -1,4 +1,6 @@
 es:
+  views:
+    signin: 'Fichajes'
   admin:
     actions:
       bulk_delete:
