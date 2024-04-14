@@ -85,3 +85,4 @@ gem 'rails-i18n'
 
 gem 'bootstrap', '~> 5.0.2'
 
+gem 'byebug'
