@@ -1,0 +1,4 @@
+<!-- app/views/signins/create.turbo_stream.erb -->
+<%= turbo_stream.replace "scroll-box" do %>
+    <%= render partial: "signins/signins", locals: { signins: @signins } %>
+<% end %>

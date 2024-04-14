@@ -1,8 +1,35 @@
+<div class="container signin-form">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="d-flex justify-content-end mb-3">
+        <%= link_to 'Registrarme', new_person_user_people_path, class: 'btn btn-success' %>
+      </div>
+      <h2 class="text-center">Fichajes</h2>
+      <form action="<%= signin_create_path%>" method="post" class="form-group">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <label for="documento" class="form-label">Número de documento:</label>
+        <input type="text" id="documento" name="documento" class="form-control">
+        <input type="submit" value="Fichar" class="btn btn-primary mt-3">
+      </form>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="scroll-box">
+        <% @signins.each do |signin| %>
+          <% if signin.signin_type == "Entrada" %>
+            <span class="badge rounded-pill bg-primary"><%= signin %></span>
+          <% elsif signin.signin_type == "Salida" %>
+            <span class="badge rounded-pill bg-success"><%= signin %></span>
+          <% else %>
+            <p><%= signin %></p>
+          <% end %>
+          <br><br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<form action="signin/create" method="post">
-  <label for="documento">Número de documento:</label>
-  <input type="text" id="documento" name="documento">
-  <input type="submit" value="Enviar">
-</form>
+    
 
-asdasdasdasdasdas

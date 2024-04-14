@@ -10,4 +10,8 @@ class Person < ApplicationRecord
   validates :email, presence: true
 
   has_many :attendances
+
+  def to_s
+    "#{first_name} #{last_name} - #{document_number}"
+  end
 end
