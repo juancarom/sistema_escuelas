@@ -114,7 +114,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_08_194328) do
 
   create_table "signins", charset: "utf8", force: :cascade do |t|
     t.bigint "person_id", null: false
-    t.string "type"
+    t.string "signin_type"
     t.datetime "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
