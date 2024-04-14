@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   get 'signin/signin'
   post 'signin/create'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :people
+  resources :people do
+    collection do
+      get 'new_person_user'
+      post 'create_person_user'
+    end
+  end
   devise_for :users
   resources :users, only: [:edit]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

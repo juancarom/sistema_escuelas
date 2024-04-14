@@ -34,6 +34,29 @@ class PeopleController < ApplicationController
     end
   end
 
+  def new_person_user
+    @person = Person.new
+  end
+
+  def create_person_user
+    @person = Person.new(person_params)
+    @user = User.new(email: @person.email, password: @person.document_number.to_s, password_confirmation: @person.document_number.to_s)
+    @user.save!
+    @person.user = @user
+    respond_to do |format|
+      if @person.save
+        flash[:success] = 'La nueva persona fue agregada al sistema correctamente'
+        format.html { redirect_to signin_signin_path, notice: 'La nueva persona fue agregada al sistema correctamente' }
+        format.json { render :show, status: :created, location: @person }
+      else
+        flash[:error] = 'Error al agregar la nueva persona al sistema'
+        format.html { redirect_to signin_signin_path, status: :unprocessable_entity }
+        format.json { render json: @person.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
   # PATCH/PUT /people/1 or /people/1.json
   def update
     respond_to do |format|
